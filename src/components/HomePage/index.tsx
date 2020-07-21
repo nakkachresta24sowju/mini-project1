@@ -6,9 +6,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Link to="/page-1">Page 1</Link>
-        <Link to='/Login-Page'>Login Page</Link>
-        <Link to='/SignUp-Page'>SignUp Page</Link>
+        <div><Link to="/page-1">Page 1</Link></div>
+        <div><Link to='/Login-Page'>Login Page</Link></div>
+        <div><Link to='/SignUp-Page'>SignUp Page</Link></div>
+        <div><Link  to='Button'>Button</Link></div>
       </header>
     </div>
   );

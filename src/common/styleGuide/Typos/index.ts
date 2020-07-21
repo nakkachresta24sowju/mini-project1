@@ -7,7 +7,7 @@ const Typo14WhiteRubikMedium = styled.button`
 `
 const Typo12SteelHKGrotesk = styled.span`
    color: ${colors.steel};
-   font-size: 6px;
+   font-size: 8px;
    ${tw`ml-8 mr-8 mt-4`}
 `
 

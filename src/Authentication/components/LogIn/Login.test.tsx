@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import { LoginPage } from '.'
+import { LoginPage } from './index'
 
 describe('LoginPage', () => {
    it('should render typed username', () => {

@@ -8,7 +8,7 @@ import {
    getAccessToken,
    clearUserSession
 } from '../../../utils/StorageUtils'
-import LoginPage from '../../components/LogIn/index'
+import {LoginPage }from '../../components/LogIn/index'
 
 interface LogInRouteProps {
    history: History

@@ -10,6 +10,7 @@ import Stores from './common/Stores'
 import Loader from './components/common/Icons/Loader/SvgFile'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n'
+import  ButtonCreate  from "./components/ButtonCommonComponent/index"
 // const DashBoardRoute = lazy(() =>
 //    import('././Dashboard/routes/DashBoardRoute/DashboardRoute')
 // )
@@ -22,12 +23,10 @@ const App = () => {
          <I18nextProvider i18n={i18n}>
             <Suspense fallback={<Loader />}>
                <Router basename={process.env.PUBLIC_URL}>
-                  <Switch>
-                     <Route exact path='/page-1'>
-                        <Page1 />
-                     </Route>
+               <Switch>
                      <Route exact path='/Login-Page' component={LogInRoute} />
-                     <Route exact path='/Signin-Page' component={SignUpRoute} />
+                     <Route exact path='/SignUp-Page' component={SignUpRoute} />
+                     <Route exact path='/Button' component={ButtonCreate} />
                      <Route path='/'>
                         <HomePage />
                      </Route>
