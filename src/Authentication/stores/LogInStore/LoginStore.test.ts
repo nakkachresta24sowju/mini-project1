@@ -6,6 +6,7 @@ import {
    API_INITIAL
 } from '@ib/api-constants'
 import LogInService from  '../../services/LoginAPI'
+//import LogInService from  '../../services/LoginFixture'
 import getUserLogInResponse from '../../fixtures/getUserLoginResponse.json'
 import LogInStore from './LoginStore'
 /*global jest*/

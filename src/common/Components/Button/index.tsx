@@ -7,7 +7,7 @@ import {
 } from './constants/buttonConstants'
 import { OutlineButton, FilledButton } from './styledComponents'
 import './index.css'
-import {Typo14ButtonText} from '../../Typos/index'
+import {Typo14ButtonText} from '../../styleGuide/Typos'
 import ButtonType from "@storybook/addon-knobs/dist/components/types/Button"
 type Props = {
    textTypo: any

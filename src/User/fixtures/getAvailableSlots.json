@@ -1,0 +1,63 @@
+{
+    "AvalibleSlots": [
+                {
+                    "Date": "28-07-2020",
+                    "Slots": [
+                            {
+                                "Id": 2,
+                                "StartTime": "4.00PM",
+                                "EndTime": "5.00PM",
+                                "IsAvalible": true
+                            },
+                            {
+                                "Id": 2,
+                                "StartTime": "4.00PM",
+                                "EndTime": "5.00PM",
+                                "IsAvalible": true
+                            },
+                            {
+                                "Id": 2,
+                                "StartTime": "4.00PM",
+                                "EndTime": "5.00PM",
+                                "IsAvalible": true
+                            }
+                        ]
+                },
+                {
+                    "Date": "22-07-2020",
+                    "Slots": [
+                            {
+                                "Id": 1,
+                                "StartTime": "4.00PM",
+                                "EndTime": "5.00PM",
+                                "IsAvalible": true
+                            },
+                            {
+                                "Id": 2,
+                                "StartTime": "4.00PM",
+                                "EndTime": "5.00PM",
+                                "IsAvalible": true
+                            }
+                        ]
+                },
+                {
+                    "Date": "20-07-2020",
+                    "Slots": [
+                            {
+                                "Id": 4,
+                                "StartTime": "4.00PM",
+                                "EndTime": "5.00PM",
+                                "IsAvalible": true
+                            },{
+                                "Id": 2,
+                                "StartTime": "4.00PM",
+                                "EndTime": "5.00PM",
+                                "IsAvalible": true
+                            }
+                        ]
+                }
+            ]
+}
+
+
+

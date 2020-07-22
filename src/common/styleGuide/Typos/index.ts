@@ -7,7 +7,7 @@ const Typo14WhiteRubikMedium = styled.button`
 `
 const Typo12SteelHKGrotesk = styled.span`
    color: ${colors.steel};
-   font-size: 8px;
+   font-size: 10px;
    ${tw`ml-8 mr-8 mt-4`}
 `
 
@@ -25,7 +25,14 @@ const HKGroteskSemiBold = styled.div`
    background-color: #bee3f8;
    font-size: 10px;
 `
+const Typo14ButtonText = styled.button`
+   ${tw` text-blue-600 border border-transparent`}
+   font-size:18px;
+   
+`
+
 export {
+   Typo14ButtonText,
    Typo32DarkBlueGreyRubikRegular,
    Typo14WhiteRubikMedium,
    Typo12SteelHKGrotesk,

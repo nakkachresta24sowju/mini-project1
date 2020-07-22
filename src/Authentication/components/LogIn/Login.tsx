@@ -2,51 +2,48 @@ import React from 'react'
 import {
    LoginPageParentContainer,
    LoginPageChildContainer,
-   ErrorMessage
+   ErrorMessage,
+   Svg
 } from './styledComponents'
 import {
    Typo14WhiteRubikMedium,
    Typo12SteelHKGrotesk,
    Typo32DarkBlueGreyRubikRegular,
-   Typo14DarkBlueGreyHKGroteskRegular
+   Typo14DarkBlueGreyHKGroteskRegular,
+   Typo14ButtonText
 } from '../../../common/styleGuide/Typos'
 import { InputTag } from '../../../common/styledComponents'
 import { withTranslation, WithTranslation } from 'react-i18next'
+import { observer } from "mobx-react"
+import { observable } from "mobx"
+import SvgComponent from "../../../components/common/Icons/Loader/IbHubsLogo"
 
 interface Props extends WithTranslation {
    userName: string
-   onChangeUserName(event: React.FormEvent<HTMLInputElement>): void
+   onChangeUsername(event: React.FormEvent<HTMLInputElement>):void
    password: string
    onChangePassword(event: React.FormEvent<HTMLInputElement>): void
    onClickLogIn(event: React.MouseEvent<HTMLButtonElement>): void
    errorMessage: string
 }
+@observer
 class LoginPage extends React.Component<Props> {
-   static defaultProps = {
-      userName: '',
-      password: '',
-      errorMessage: '',
-      onChangeUserName: () => {},
-      onChangePassword: () => {},
-      onClickLogIn: () => {}
-   }
+  
    render() {
       const {
          userName,
-         onChangeUserName,
+         onChangeUsername,
          password,
          onChangePassword,
          onClickLogIn,
          errorMessage
       } = this.props
       const { t } = this.props
+   
       return (
          <LoginPageParentContainer>
             <LoginPageChildContainer>
-               <img
-                  src='https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/ecca87bf-3005-41c9-aa87-d8a5dd3741ff.svg'
-                  alt='ibhub-logo'
-               />
+               <Svg><SvgComponent /></Svg>
                <Typo32DarkBlueGreyRubikRegular>
                   {t('strings:login.title')}
                </Typo32DarkBlueGreyRubikRegular>
@@ -57,7 +54,7 @@ class LoginPage extends React.Component<Props> {
                <InputTag
                   type='text'
                   value={userName}
-                  onChange={onChangeUserName}
+                  onChange={onChangeUsername}
                   data-testid='username'
                />
                <Typo12SteelHKGrotesk>
@@ -75,7 +72,8 @@ class LoginPage extends React.Component<Props> {
                </Typo14WhiteRubikMedium>
 
                <Typo14DarkBlueGreyHKGroteskRegular>
-                  {t(`strings:login.accountstatus`)}
+                  {t(`strings:login.accountstatus`)} 
+                  <Typo14ButtonText>{t(`strings:login.signuptext`)}</Typo14ButtonText>
                </Typo14DarkBlueGreyHKGroteskRegular>
             </LoginPageChildContainer>
          </LoginPageParentContainer>

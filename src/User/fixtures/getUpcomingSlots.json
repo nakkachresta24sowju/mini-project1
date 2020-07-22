@@ -1,0 +1,25 @@
+{
+    "UpcomingSlots": [
+                {
+                    "Date": "29-07-12",
+                    "SlotId" : 5,
+                    "WashingMachineId": 3,
+                    "StartTime": "5.00PM",
+                    "EndTime": "6.00PM"
+                },
+                {
+                    "Date": "28-07-12",
+                    "SlotId" : 5,
+                    "WashingMachineId": 3,
+                    "StartTime": "5.00PM",
+                    "EndTime": "6.00PM"
+                },
+                {
+                    "Date": "30-07-12",
+                    "SlotId" : 5,
+                    "WashingMachineId": 3,
+                    "StartTime": "5.00PM",
+                    "EndTime": "6.00PM"
+                }
+            ]
+}

@@ -1,0 +1,26 @@
+{
+    "Slots": [
+        {
+            "Date":"1-08-2020",
+            "SlotId": 9,
+            "StartTime": "6.00AM",
+            "EndTime": "7.00AM",
+            "WashingMachineId":5
+        },
+        {
+            "Date":"1-08-2020",
+            "SlotId": 6,
+            "StartTime": "6.00AM",
+            "EndTime": "7.00AM",
+            "WashingMachineId":5
+        },
+        {
+            "Date":"1-08-2020",
+            "SlotId": 10,
+            "StartTime": "6.00AM",
+            "EndTime": "7.00AM",
+            "WashingMachineId":6
+        }
+    ],
+    "TotalSlotsCount": 8
+}

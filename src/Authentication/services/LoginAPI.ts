@@ -4,16 +4,17 @@ import { apiMethods } from '../../constants/APIConstants'
 import getUserLoginResponse from '../fixtures/getUserLoginResponse.json'
 import endpoints from './endpoints'
 import Config from '../../common/EnvironmentalConstants'
-
-class LogInService {
+import LogInServiceInterface from '../services/index'
+class LogInService implements LogInServiceInterface{
    api
    constructor() {
       this.api = create({
-         baseURL: Config.envKey
+         baseURL: 'http://bfa40637e0f5.ngrok.io/api/auth_app/'
       })
+      console.log(Config.envKey)
    }
-   // baseURL: 'https://9ce065a0d7bf.ngrok.io/'
-   logInAPI = request => {
+   
+   logInAPI = (request) => {
       return networkCallWithApisauce(
          this.api,
          endpoints.login.access_key,

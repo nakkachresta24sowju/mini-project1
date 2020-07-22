@@ -4,12 +4,14 @@ import {
    setAccessToken,
    clearUserSession
 } from '../../../utils/StorageUtils'
-import LoginService from '../../services/LoginAPI'
+//import LoginService from '../../services/LoginAPI'
+import LoginService from '../../services/LoginFixture'
 import { API_INITIAL, APIStatus } from '@ib/api-constants'
 class LogInStore {
    @observable getUserLogInAPIStatus!: APIStatus
    @observable getUserLogInAPIError!: string | null
    loginAPIService: LoginService
+   role !:string
 
    constructor(loginAPIService: LoginService) {
       this.loginAPIService = loginAPIService
@@ -29,7 +31,7 @@ class LogInStore {
          password: password
       }
       const loginPromise = this.loginAPIService.logInAPI(requestObject)
-
+      console.log(requestObject)
       return bindPromiseWithOnSuccess(loginPromise)
          .to(this.setGetUserLogInAPIStatus, this.setUserLogInAPIResponse)
          .catch(this.setGetUserLogInAPIError)
@@ -37,6 +39,15 @@ class LogInStore {
 
    @action.bound
    setUserLogInAPIResponse(loginResponse) {
+      if(loginResponse.is_admin === false)
+      {
+         this.role = "User"       
+      }
+      else 
+      {
+         this.role="Admin"
+      }
+      
       setAccessToken(loginResponse.access_token)
    }
 

@@ -4,19 +4,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Provider } from 'mobx-react'
 import HomePage from './components/HomePage'
 import Page1 from './components/Page1'
-import LogInRoute from '././Authentication/routes/LogInRoute/LoginRoute'
 import SignUpRoute from '././Authentication/routes/SignUpRoute/SignUpRoute'
 import Stores from './common/Stores'
 import Loader from './components/common/Icons/Loader/SvgFile'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n'
-import  ButtonCreate  from "./components/ButtonCommonComponent/index"
-// const DashBoardRoute = lazy(() =>
-//    import('././Dashboard/routes/DashBoardRoute/DashboardRoute')
-// )
-// const SelectedDomainRoute = lazy(() =>
-//    import('././Dashboard/routes/SelectedDomainRoute/SelectedDomainRoute')
-// )
+import ProtectedRoute from './common/Components/ProtectedRoute/index'
+import { ADMIN_HOME_PAGE, LOGIN_PATH ,USER_HOME_PAGE} from "./common/constants/routeConstants"
+import AdminRoute from './Admin/routes/AdminRoute/AdminRoute'
+import UserRoute from './User/routes/UserRoute/UserRoute'
+const LogInRoute = lazy(() =>
+   import('././Authentication/routes/LogInRoute/index')
+)
 const App = () => {
    return (
       <Provider {...Stores}>
@@ -24,13 +23,12 @@ const App = () => {
             <Suspense fallback={<Loader />}>
                <Router basename={process.env.PUBLIC_URL}>
                <Switch>
-                     <Route exact path='/Login-Page' component={LogInRoute} />
-                     <Route exact path='/SignUp-Page' component={SignUpRoute} />
-                     <Route exact path='/Button' component={ButtonCreate} />
-                     <Route path='/'>
-                        <HomePage />
-                     </Route>
-                  </Switch>
+                  <Route exact path ={LOGIN_PATH} component={LogInRoute} />
+                  <Route  exact path={USER_HOME_PAGE} component={UserRoute}/>
+                  <Route  exact path={ADMIN_HOME_PAGE} component={AdminRoute}/>
+                   
+                  <Route path = "/" component={HomePage} />
+               </Switch>
                </Router>
             </Suspense>
          </I18nextProvider>
@@ -39,3 +37,14 @@ const App = () => {
 }
 
 export default App
+
+
+{/* <ProtectedRoute
+                    path={USER_HOME_PAGE}
+                  component={UserRoute}
+                  /> 
+
+                  <ProtectedRoute 
+                   path={ADMIN_HOME_PAGE}
+                  component={AdminRoute}
+                  />  */}

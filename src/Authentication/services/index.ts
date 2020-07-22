@@ -1,7 +1,8 @@
-import { LogInType,SignUpType } from '../stores/types'
-interface LogInService {
-   logInAPI: (request: LogInType) => Promise<string>
+import { LogInType,SignUpType,GetUserLoginApiResponse } from '../stores/types'
+interface LogInServiceInterface {
+   logInAPI: (request: LogInType) => Promise<GetUserLoginApiResponse>
 }
-interface SignUpService{
-   SignUpAPI:(request:SignUpType) => Promise<string>
-}
+// export interface SignUpServiceInterface{
+//    SignUpAPI:(request:SignUpType) => Promise<string>
+// }
+export default LogInServiceInterface

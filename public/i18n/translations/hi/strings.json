@@ -1,0 +1,31 @@
+{
+    "signup": {
+       "username": "",
+       "password": "PASSWORD",
+       "confirmpassword": "CONFIRM PASSWORD",
+       "title": "Hi there,please sign up",
+       "accountstatus": "Already have an account? Log in",
+       "weak": "WEAK",
+       "strong": "STRONG"
+    },
+    "login": {
+       "username": "USER NAME",
+       "password": "PASSWORD",
+       "title": "Hi there,please sign up",
+       "accountstatus": "Do you have an account?",
+       "signuptext": "signup"
+    },
+    "Profile": {
+       "name": "NAME",
+       "email": "EMAIL",
+       "gender": "GENDER",
+       "job role": "JOB ROLE",
+       "department": "DEPARTMENT",
+       "change photo": "Change photo"
+    },
+    "changepassword": {
+       "new password": "NEW PASSWORD",
+       "Confirm password": "CONFIRM PASSWORD",
+       "weak": "WEAK",
+       "strong": "STRONG"
+    },

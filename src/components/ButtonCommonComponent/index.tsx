@@ -5,7 +5,7 @@ import {
    ButtonTypes,
    ButtonVarient
 } from '../../common/Components/Button/constants/buttonConstants'
-import { Typo14ButtonText } from '../../common/Typos'
+import { Typo14ButtonText } from '../../common/styleGuide/Typos'
 
 class ButtonCreate extends React.Component {
    onClick = () => {

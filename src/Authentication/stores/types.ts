@@ -3,7 +3,11 @@ export interface LogInType {
     password: string
  }
  export interface SignUpType{
-     ussername:string
+     username:string
      password:string
      confirmpassword:string
+ }
+ export interface GetUserLoginApiResponse{
+    access_token:string
+    is_admin:boolean
  }

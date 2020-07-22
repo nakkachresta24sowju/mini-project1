@@ -16,7 +16,7 @@ class SignUpService {
    signUpAPI = request => {
       return networkCallWithApisauce(
          this.api,
-         endpoints.signin.access_key,
+         endpoints.login.access_key,
          request,
          apiMethods.post
       )
