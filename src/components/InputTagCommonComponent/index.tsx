@@ -16,7 +16,7 @@ class InputTagCreate extends React.Component {
         value={this.inputValue}          
         inputTagHeight={4}
         inputTagWidth={5}
-        />
+       />
       )
     }
   }
