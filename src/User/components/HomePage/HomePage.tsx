@@ -78,7 +78,7 @@ class UserHomePage extends React.Component<componentProps>{
         return(<div>
             <Header/>
             <HomePageFeedContainer>    
-                <AvailableSlotsContainer>
+         <AvailableSlotsContainer>
                 <Typo14DarkBlueGreyHKGroteskRegular>{t(`strings:homepage.availableslots`)}</Typo14DarkBlueGreyHKGroteskRegular>
                     <AvailableSlotsCard>
                         <div>Checkboxes</div>
