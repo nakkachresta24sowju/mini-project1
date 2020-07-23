@@ -20,6 +20,7 @@ const LogInRoute = lazy(() =>
    import('././Authentication/routes/LogInRoute/index')
 )
 const App = () => {
+   alert(10)
    return (
       <Provider {...Stores}>
          <I18nextProvider i18n={i18n}>
