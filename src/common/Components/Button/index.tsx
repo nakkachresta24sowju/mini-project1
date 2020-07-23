@@ -44,14 +44,14 @@ class Button extends React.Component<Props> {
 
    }
     render() {
-      const { type ,onClick,buttonHeight,buttonWidth,buttonRadius, buttonColor,buttonBgcolor,buttonBrcolor} = this.props
+      const { type ,textTitle,onClick,buttonHeight,buttonWidth,buttonRadius, buttonColor,buttonBgcolor,buttonBrcolor} = this.props
           
            if(type === ButtonTypes.Filled){
               return (
                  <FilledButton
                     textTypo={Typo14ButtonText}
                     className='something'
-                    textTitle={TEXT_TITLE}
+                    textTitle={textTitle}
                     onClick={onClick}
                     type={ButtonTypes}
                     buttonHeight={buttonHeight}
@@ -70,7 +70,7 @@ class Button extends React.Component<Props> {
                  <OutlineButton
                     textTypo={Typo14ButtonText}
                     className='something'
-                    textTitle={TEXT_TITLE}
+                    textTitle={textTitle}
                     onClick={onClick}
                     type={ButtonTypes}
                     buttonHeight={buttonHeight}

@@ -13,8 +13,8 @@ import UpcomingSlots from "../models/UpcomingSlots"
       @observable getAvailableSlotsAPIError: string | null = null
       @observable getUpcomingSlotsAPIStatus !:APIStatus
       @observable getUpcomingSlotsAPIError :string | null = null
-      @observable availableSlots 
-      @observable upcomingSlots
+      @observable availableSlots !: Array<AvailableSlots>
+      @observable upcomingSlots !: Array<UpcomingSlots>
       userAPIService: UserService
       
       constructor(userAPIService) {
@@ -28,6 +28,7 @@ import UpcomingSlots from "../models/UpcomingSlots"
          this.getAvailableSlotsAPIError = null,
          this.getUpcomingSlotsAPIError = null,
          this.getUpcomingSlotsAPIStatus = API_INITIAL
+         
       }
      
    
@@ -49,7 +50,10 @@ import UpcomingSlots from "../models/UpcomingSlots"
    
       @action.bound
       setAvailableSlotsResponse(userservice) {
-       this.availableSlots = new AvailableSlots(userservice)
+         
+         this.availableSlots = userservice.AvailableSlots.map(obj => {
+            return new AvailableSlots(obj)})
+            console.log(this.availableSlots,555555)
       }
       @action.bound
       setGetAvailableSlotsAPIError(error) {
@@ -74,8 +78,7 @@ import UpcomingSlots from "../models/UpcomingSlots"
    
       @action.bound
       setUpcomingSlotsResponse(userservice) {
-         console.log(userservice,122122)
-        this.upcomingSlots = new UpcomingSlots(userservice)
+        this.upcomingSlots = userservice.UpcomingSlots.map(obj => {return new UpcomingSlots(obj)})
       }
    
       @action.bound

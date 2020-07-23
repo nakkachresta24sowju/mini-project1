@@ -1,4 +1,4 @@
-import {AvailableSlotsType,UpcomingSlotsType,AvailableSlotsResponseType} from '../stores/types'
+import {AvailableSlotsType,UpcomingSlotsType,AvailableSlotsResponseType, AvailableSlotsObj} from '../stores/types'
 
 interface UserServiceInterface {
    getAvailableSlotsAPI : (request:AvailableSlotsResponseType) => Promise<AvailableSlotsType>

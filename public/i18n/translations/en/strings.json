@@ -28,5 +28,17 @@
        "Confirm password": "CONFIRM PASSWORD",
        "weak": "WEAK",
        "strong": "STRONG"
+    },
+    "userheader":{
+       "home":"Home",
+       "requests":"Requests",
+       "report an issue":"Report an Issue",
+       "previous slots":"Previous Slots",
+       "profile":"Profile",
+       "no of slots":"Number of slots missed:"
+    },
+    "homepage":{
+      "availableslots":"Available Slots",
+      "upcomingslots":"Upcoming Slots"
     }
 }

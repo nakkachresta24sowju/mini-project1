@@ -30,6 +30,11 @@ const Typo14ButtonText = styled.button`
    font-size:18px;
    
 `
+const Typo18SteelHKGroteskSemiBold = styled.div`
+  font-size:18px;  
+  color: ${colors.steel60};
+  
+`
 
 export {
    Typo14ButtonText,
@@ -37,5 +42,6 @@ export {
    Typo14WhiteRubikMedium,
    Typo12SteelHKGrotesk,
    Typo14DarkBlueGreyHKGroteskRegular,
-   HKGroteskSemiBold
+   HKGroteskSemiBold,
+   Typo18SteelHKGroteskSemiBold
 }

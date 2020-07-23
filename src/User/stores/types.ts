@@ -1,5 +1,5 @@
 export interface AvailableSlotsType {
-    AvalibleSlots:Array<AvailableSlotsObj>
+    AvailableSlots:Array<AvailableSlotsObj>
  }
  export interface AvailableSlotsObj{
     Slots: Array<SlotsType>,
