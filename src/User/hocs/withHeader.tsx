@@ -2,28 +2,27 @@ import React from 'react'
 import { observer, inject } from 'mobx-react'
 import { observable } from 'mobx'
 import Header from '../components/Header/index'
-import UserStore from "../stores/UserStore/UserStore"
-
+import UserStore from '../stores/UserStore/UserStore'
 
 interface componentProps {}
 interface InjectedProps extends componentProps {
-   userStore:UserStore
+   userStore: UserStore
 }
 
 function withHeader(WrappedComponent: Function) {
    @inject('userStore')
    @observer
-   class EnhancedComponent extends React.Component{
+   class EnhancedComponent extends React.Component {
       getInjectedProps = () => {
          const props = this.props as unknown
          return props as InjectedProps
       }
       render() {
-      const {userStore} = this.getInjectedProps()
-         return (<div>
-            <WrappedComponent  userStore={userStore}/>
-         </div>
-            
+         const { userStore } = this.getInjectedProps()
+         return (
+            <div>
+               <WrappedComponent {...this.props} />
+            </div>
          )
       }
    }

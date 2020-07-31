@@ -1,63 +1,85 @@
 {
-    "AvailableSlots": [
-                {
-                    "Date": "28-07-2020",
-                    "Slots": [
-                            {
-                                "Id": 2,
-                                "StartTime": "4.00PM",
-                                "EndTime": "5.00PM",
-                                "IsAvalible": true
-                            },
-                            {
-                                "Id": 2,
-                                "StartTime": "4.00PM",
-                                "EndTime": "5.00PM",
-                                "IsAvalible": true
-                            },
-                            {
-                                "Id": 2,
-                                "StartTime": "4.00PM",
-                                "EndTime": "5.00PM",
-                                "IsAvalible": true
-                            }
-                        ]
-                },
-                {
-                    "Date": "22-07-2020",
-                    "Slots": [
-                            {
-                                "Id": 1,
-                                "StartTime": "4.00PM",
-                                "EndTime": "5.00PM",
-                                "IsAvalible": true
-                            },
-                            {
-                                "Id": 2,
-                                "StartTime": "4.00PM",
-                                "EndTime": "5.00PM",
-                                "IsAvalible": true
-                            }
-                        ]
-                },
-                {
-                    "Date": "20-07-2020",
-                    "Slots": [
-                            {
-                                "Id": 4,
-                                "StartTime": "4.00PM",
-                                "EndTime": "5.00PM",
-                                "IsAvalible": true
-                            },{
-                                "Id": 2,
-                                "StartTime": "4.00PM",
-                                "EndTime": "5.00PM",
-                                "IsAvalible": true
-                            }
-                        ]
-                }
-            ]
+   "AvailableSlots": [
+      {
+         "Date": "28-07-2020",
+         "Slots": [
+            {
+               "Id": 1,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": true
+            },
+            {
+               "Id": 2,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": true
+            },
+            {
+               "Id": 3,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": true
+            }
+         ]
+      },
+      {
+         "Date": "22-07-2020",
+         "Slots": [
+            {
+               "Id": 1,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": true
+            },
+            {
+               "Id": 2,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": true
+            },
+            {
+               "Id": 3,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": false
+            }
+         ]
+      },
+      {
+         "Date": "20-07-2020",
+         "Slots": [
+            {
+               "Id": 1,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": true
+            },
+            {
+               "Id": 2,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": false
+            },
+            {
+               "Id": 3,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": false
+            },
+            {
+               "Id": 4,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": true
+            },
+            {
+               "Id": 5,
+               "StartTime": "4.00PM",
+               "EndTime": "5.00PM",
+               "IsAvailable": true
+            }
+         ]
+      }
+   ]
 }
-
-
-
