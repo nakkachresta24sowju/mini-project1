@@ -3,7 +3,7 @@ import tw from 'tailwind.macro'
 type Props = {
    buttonHeight: any
    buttonWidth: any
-   isDisable: string
+   isDisable: string | undefined
 }
 const ButtonWrapper = styled.button<Props>`
    height: ${(props) => props.buttonHeight}rem;

@@ -9,6 +9,7 @@ import { OutlineButton, FilledButton } from './styledComponents'
 import './index.css'
 import { Typo14ButtonText } from '../../styleGuide/Typos'
 import ButtonType from '@storybook/addon-knobs/dist/components/types/Button'
+import { observer } from 'mobx-react'
 type Props = {
    textTypo: any
    className: any
@@ -27,6 +28,7 @@ type Props = {
    isDisable: string
 }
 
+@observer
 class Button extends React.Component<Props> {
    static defaultTypes = {
       type: ButtonTypes,
@@ -42,6 +44,8 @@ class Button extends React.Component<Props> {
       }
    }
    render() {
+      console.log('button component')
+
       const {
          type,
          textTitle,
@@ -59,6 +63,7 @@ class Button extends React.Component<Props> {
       } = this.props
 
       if (type === ButtonTypes.Filled) {
+         console.log('Filled button')
          return (
             <FilledButton
                isDisable={isDisable}
@@ -79,6 +84,7 @@ class Button extends React.Component<Props> {
             />
          )
       } else if (type === ButtonTypes.Outline) {
+         console.log('outline button')
          return (
             <OutlineButton
                isDisable={isDisable}
@@ -98,8 +104,6 @@ class Button extends React.Component<Props> {
                buttonMargin={buttonMargin}
             />
          )
-      } else {
-         alert('Invalid Type')
       }
    }
 }

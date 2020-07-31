@@ -12,7 +12,7 @@ type Props = {
    apiStatus: any
    renderSuccessUI: any
    onRetryClick: any
-   apiError: any     
+   apiError: any
 }
 @observer
 class LoadingWrapperWithFailure extends React.Component<Props> {
@@ -21,20 +21,20 @@ class LoadingWrapperWithFailure extends React.Component<Props> {
          apiStatus,
          renderSuccessUI: RenderSuccessUI,
          onRetryClick,
-         apiError
+         apiError,
       } = this.props
 
       const errorMessage = getUserDisplayableErrorMessage(apiError)
 
       switch (apiStatus) {
          case API_FETCHING:
-            alert('fething')
+            alert('fetching')
             return <LoadingView />
          case API_SUCCESS:
             alert('success')
             return <RenderSuccessUI />
          case API_FAILED:
-            alert('failde')
+            alert('failed')
             return (
                <FailureView
                   onRetryClick={onRetryClick}

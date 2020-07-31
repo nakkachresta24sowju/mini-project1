@@ -20,6 +20,9 @@ import {
    ThemeBooked,
    EachSlot,
    SlotsContainer,
+   UpcomingSlotsButton,
+   AllocatedSlotsButton,
+   EachSlotButton,
 } from './styledComponents'
 import UserStore from '../../stores/UserStore/UserStore'
 import { SlotsType } from '../../stores/types'
@@ -51,53 +54,29 @@ class AvailableSlotsComponent extends React.Component<Props> {
                {selectedAvailableSlotsList.map((eachslot) => {
                   if (eachslot.IsAvailable) {
                      return (
-                        <Button
-                           value={eachslot}
+                        <EachSlotButton
+                           value={`${eachslot}`}
                            key={new Date().getTime()}
-                           textTypo='revert'
-                           isDisable='false'
-                           className='something'
-                           buttonHeight={2}
-                           buttonWidth={10}
-                           buttonRadius={5}
-                           buttonColor='black'
-                           buttonBgcolor='green'
-                           buttonBrcolor='red'
-                           buttonMargin={8}
                            onClick={this.onClickAvailableSlot.bind(
                               this,
                               eachslot.Id,
                               this.slotDate
                            )}
-                           type={Button.defaultTypes.type.Outline}
-                           varient={Button.defaultTypes.varient.Oval}
-                           textTitle={eachslot.StartTime}
-                        />
+                        >
+                           {eachslot.StartTime}
+                        </EachSlotButton>
                      )
                   } else {
                      return (
-                        <Button
-                           value={eachslot}
-                           isDisable='false'
+                        <EachSlotButton
+                           value={`${eachslot}`}
                            key={new Date().getTime()}
-                           textTypo='revert'
-                           className='something'
-                           buttonHeight={2}
-                           buttonWidth={10}
-                           buttonRadius={5}
-                           buttonColor='black'
-                           buttonBgcolor='green'
-                           buttonBrcolor='red'
-                           buttonMargin={8}
                            onClick={this.onClickAvailableSlot.bind(
                               this,
                               eachslot.Id,
                               this.slotDate
                            )}
-                           type={Button.defaultTypes.type.Outline}
-                           varient={Button.defaultTypes.varient.Oval}
-                           textTitle={eachslot.StartTime}
-                        />
+                        ></EachSlotButton>
                      )
                   }
                })}
@@ -116,27 +95,16 @@ class AvailableSlotsComponent extends React.Component<Props> {
                {availableSlotsList.map((item) => {
                   this.slotDate = item.Date
                   return (
-                     <Button
-                        value={item}
+                     <AllocatedSlotsButton
+                        value={`${item}`}
                         key={new Date().getTime()}
-                        isDisable='true'
-                        textTypo='revert'
-                        className='something'
-                        buttonHeight={2}
-                        buttonWidth={10}
-                        buttonRadius={5}
-                        buttonColor='black'
-                        buttonBgcolor='green'
-                        buttonBrcolor='red'
-                        buttonMargin={8}
                         onClick={this.onClickAvailableSlotDate.bind(
                            this,
                            item.Date
                         )}
-                        type={Button.defaultTypes.type.Outline}
-                        varient={Button.defaultTypes.varient.Oval}
-                        textTitle={item.Date}
-                     />
+                     >
+                        {item.Date}
+                     </AllocatedSlotsButton>
                   )
                })}
             </React.Fragment>

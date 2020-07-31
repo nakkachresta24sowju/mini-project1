@@ -2,15 +2,15 @@ import React from 'react'
 import { ButtonWrapper } from './styledComponent'
 
 type Props = {
-   textTypo: any
-   className: any
-   textTitle: any
-   onClick: any
-   type: any
-   buttonHeight: any
-   buttonWidth: any
-   value: any
-   isDisable: string
+   textTypo?: any
+   className?: any
+   textTitle?: any
+   onClick?: any
+   type?: any
+   buttonHeight?: any
+   buttonWidth?: any
+   value?: any
+   isDisable?: string | undefined
 }
 class BaseButton extends React.Component<Props> {
    render() {

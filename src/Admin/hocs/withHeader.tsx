@@ -2,9 +2,12 @@ import React from 'react'
 import { observer, inject } from 'mobx-react'
 import { observable } from 'mobx'
 import Header from '../components/Header/index'
+import UserStore from '../../User/stores/UserStore/UserStore'
 
 interface componentProps {}
-interface InjectedProps extends componentProps {}
+interface InjectedProps extends componentProps {
+   userStore: UserStore
+}
 
 function withHeader(WrappedComponent: Function) {
    @inject('userStore')
@@ -15,10 +18,10 @@ function withHeader(WrappedComponent: Function) {
          return props as InjectedProps
       }
       render() {
-         //  const { userStore } = this.getInjectedProps()
+         const { userStore } = this.getInjectedProps()
          return (
             <div>
-               <WrappedComponent />
+               <WrappedComponent userStore={userStore} />
             </div>
          )
       }

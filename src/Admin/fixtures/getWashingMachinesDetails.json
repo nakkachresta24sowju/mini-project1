@@ -1,0 +1,54 @@
+{
+   "WashingMachines": [
+      {
+         "WashingMachineId": 1,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/a6df7501-7140-42a6-b0d3-ec99a10972ac.png",
+         "IsActive": true
+      },
+      {
+         "WashingMachineId": 2,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/a48cef2b-7ab7-44ec-9c56-9645d872462f.png",
+         "IsActive": true
+      },
+      {
+         "WashingMachineId": 3,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/eab0e802-355d-4b93-81c3-350cadcb86ef.png",
+         "IsActive": true
+      },
+      {
+         "WashingMachineId": 4,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/7fcd2376-064e-49dd-b9b4-e499b4ecedda.png",
+         "IsActive": true
+      },
+      {
+         "WashingMachineId": 5,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/922d99b6-348a-4a3f-9de2-7d54c163699b.png",
+         "IsActive": true
+      },
+      {
+         "WashingMachineId": 6,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/5fd4221e-1345-4c98-ae2e-8067a9ccb739.png",
+         "IsActive": true
+      },
+      {
+         "WashingMachineId": 7,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/a6df7501-7140-42a6-b0d3-ec99a10972ac.png",
+         "IsActive": false
+      },
+      {
+         "WashingMachineId": 8,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/a48cef2b-7ab7-44ec-9c56-9645d872462f.png",
+         "IsActive": false
+      },
+      {
+         "WashingMachineId": 9,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/eab0e802-355d-4b93-81c3-350cadcb86ef.png",
+         "IsActive": false
+      },
+      {
+         "WashingMachineId": 10,
+         "WashingMachineImage": "https://cdn.zeplin.io/5d0afc9102b7fa56760995cc/assets/7fcd2376-064e-49dd-b9b4-e499b4ecedda.png",
+         "IsActive": false
+      }
+   ]
+}

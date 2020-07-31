@@ -48,6 +48,15 @@ const EachSlot = styled.div`
    ${tw`flex items-center content-center`}
    flex-wrap:wrap;
 `
+const UpcomingSlotsButton = styled.button`
+   border: 2px solid pink;
+`
+const AllocatedSlotsButton = styled.button`
+   border: 2px solid maroon;
+`
+const EachSlotButton = styled.button`
+   border: 2px solid purple;
+`
 
 export {
    HomePageFeedContainer,
@@ -60,4 +69,7 @@ export {
    ThemeSelect,
    ThemeBooked,
    EachSlot,
+   UpcomingSlotsButton,
+   AllocatedSlotsButton,
+   EachSlotButton,
 }
