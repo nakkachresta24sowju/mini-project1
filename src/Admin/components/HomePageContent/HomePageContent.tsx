@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import Button from '../../../common/Components/Button'
-
+import { Button as ActiveButton } from '../../../common/Components/Button'
+import { Button as InActiveButton } from '../../../common/Components/Button'
+import { Button as AddNewMachineButton } from '../../../common/Components/Button'
 import {
    AdminHomePageContent,
    WashingMachineCard,
@@ -10,19 +11,20 @@ import {
    ActiveText,
    WashingMachine,
    ActiveInactiveButtons,
-   AddNewMachineButton,
-   ActiveButton,
-   InActiveButton,
+   AddNewButtonStyles,
+   InActiveActiveButtonStyles,
 } from './styledComponents'
 import AdminStore from '../../stores/AdminStore/AdminStore'
 import { observer } from 'mobx-react'
 import { observable } from 'mobx'
+import AddNewMachine from '../AddNewMachine/AddNewMachine'
 interface ComponentProps {
    adminStore: AdminStore
 }
 @observer
 class HomePageContent extends Component<ComponentProps> {
    @observable activeStatus!: string
+   @observable showPopup: boolean = false
    constructor(props) {
       super(props)
       this.activeStatus = 'ACTIVE'
@@ -31,15 +33,16 @@ class HomePageContent extends Component<ComponentProps> {
       this.activeStatus = event.target.value
       alert('hai')
    }
-   // onClickonInActiveStatus = (event) => {
-   //    this.activeStatus = event.target.value
-   //    alert('hello')
-   // }
+
    onClickonStatusText = () => {
       alert('Status')
    }
    onClickAddNewMachine = () => {
+      this.showPopup = true
       alert('Add new machine')
+   }
+   OnClickClose = () => {
+      this.showPopup = false
    }
 
    renderWashingMachines = () => {
@@ -123,23 +126,42 @@ class HomePageContent extends Component<ComponentProps> {
    render() {
       return (
          <AdminHomePageContent>
-            <ActiveInactiveButtons></ActiveInactiveButtons>
-            <ActiveButton value='ACTIVE' onClick={this.onClickonActiveStatus}>
-               ACTIVE
-            </ActiveButton>
-            <InActiveButton
-               value='INACTIVE'
-               onClick={this.onClickonActiveStatus}
-            >
-               INACTIVE
-            </InActiveButton>
+            <ActiveInactiveButtons>
+               <ActiveButton
+                  value='ACTIVE'
+                  textTypo='REVERT'
+                  onClick={this.onClickonActiveStatus}
+                  css={InActiveActiveButtonStyles}
+                  type={ActiveButton.defaultTypes.type.Outline}
+                  varient={ActiveButton.defaultTypes.varient.Oval}
+                  textTitle='ACTIVE'
+               />
+               <InActiveButton
+                  value='INACTIVE'
+                  textTypo='REVERT'
+                  onClick={this.onClickonActiveStatus}
+                  css={InActiveActiveButtonStyles}
+                  type={InActiveButton.defaultTypes.type.Outline}
+                  varient={InActiveButton.defaultTypes.varient.Oval}
+                  textTitle='INACTIVE'
+               />
+            </ActiveInactiveButtons>
             <AddNewMachineButton
                value='ADD NEW MACHINE'
+               textTypo='REVERT'
                onClick={this.onClickAddNewMachine}
-            >
-               AddNewMachine
-            </AddNewMachineButton>
+               css={AddNewButtonStyles}
+               type={AddNewMachineButton.defaultTypes.type.Outline}
+               varient={AddNewMachineButton.defaultTypes.varient.Oval}
+               textTitle='ADD'
+            />
             <WashingMachine>{this.renderWashingMachines()}</WashingMachine>
+            {this.showPopup ? (
+               <AddNewMachine
+                  showPopup={this.showPopup}
+                  OnClickClose={this.OnClickClose}
+               />
+            ) : null}
          </AdminHomePageContent>
       )
    }

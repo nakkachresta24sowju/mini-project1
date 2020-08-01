@@ -9,10 +9,10 @@ const LoginPageChildContainer = styled.div`
    border: 2px solid blue;
 `
 const Svg = styled.span`
-${tw`flex  justify-center items-center`};
+   ${tw`flex  justify-center items-center`};
 `
 const ErrorMessage = styled.p`
    color: red;
    margin-left: 25px;
 `
-export { LoginPageParentContainer, LoginPageChildContainer, ErrorMessage,Svg }
+export { LoginPageParentContainer, LoginPageChildContainer, ErrorMessage, Svg }

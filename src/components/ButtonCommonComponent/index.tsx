@@ -1,12 +1,12 @@
 import React from 'react'
-import Button from '../../common/Components/Button'
+import { Button } from '../../common/Components/Button'
 import {
    TEXT_TITLE,
    ButtonTypes,
    ButtonVarient,
 } from '../../common/Components/Button/constants/buttonConstants'
 import { Typo14ButtonText } from '../../common/styleGuide/Typos'
-
+import { ButtonStyles } from './styledComponent'
 class ButtonCreate extends React.Component {
    onClick = () => {
       alert('hai')
@@ -14,18 +14,10 @@ class ButtonCreate extends React.Component {
    render() {
       return (
          <Button
-            value='dfs'
-            isDisable='false'
+            value='Button'
             textTypo={Typo14ButtonText}
-            className={'something'}
-            buttonHeight={6}
-            buttonWidth={8}
-            buttonRadius={4}
-            buttonColor='blue'
-            buttonBgcolor='maroon'
-            buttonBrcolor='yellowgreen'
             onClick={this.onClick}
-            buttonMargin={5}
+            css={ButtonStyles}
             type={Button.defaultTypes.type.Outline}
             varient={Button.defaultTypes.varient.Oval}
             textTitle={TEXT_TITLE}

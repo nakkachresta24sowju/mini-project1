@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../../common/Components/Button'
+import { Button } from '../../../common/Components/Button'
 import { withTranslation, WithTranslation } from 'react-i18next'
 import { UpcomingSlotsType, AvailableSlotsType } from '../../stores/types'
 import { observer } from 'mobx-react'

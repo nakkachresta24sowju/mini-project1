@@ -1,39 +1,18 @@
 import React from 'react'
-import { ButtonWrapper } from './styledComponent'
+import { ButtonWrapper, Text } from './styledComponent'
 
 type Props = {
-   textTypo?: any
-   className?: any
-   textTitle?: any
-   onClick?: any
-   type?: any
-   buttonHeight?: any
-   buttonWidth?: any
-   value?: any
-   isDisable?: string | undefined
+   textTypo: any
+   textTitle: any
+   onClick: any
+   value: any
 }
 class BaseButton extends React.Component<Props> {
    render() {
-      const {
-         textTypo,
-         textTitle,
-         className,
-         onClick,
-         buttonHeight,
-         buttonWidth,
-         value,
-         isDisable,
-      } = this.props
+      const { textTypo, textTitle, onClick, value } = this.props
       return (
-         <ButtonWrapper
-            isDisable={isDisable}
-            className={className}
-            value={value}
-            onClick={onClick}
-            buttonHeight={buttonHeight}
-            buttonWidth={buttonWidth}
-         >
-            {textTitle}
+         <ButtonWrapper value={value} textTypo={textTypo} onClick={onClick}>
+            <Text textTypo={textTypo}>{textTitle}</Text>
          </ButtonWrapper>
       )
    }

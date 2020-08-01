@@ -28,12 +28,10 @@ const HKGroteskSemiBold = styled.div`
 const Typo14ButtonText = styled.button`
    ${tw` text-blue-600 border border-transparent`}
    font-size:18px;
-   
 `
 const Typo18SteelHKGroteskSemiBold = styled.div`
-  font-size:18px;  
-  color: ${colors.steel60};
-  
+   font-size: 18px;
+   color: ${colors.steel60};
 `
 
 export {
@@ -43,5 +41,5 @@ export {
    Typo12SteelHKGrotesk,
    Typo14DarkBlueGreyHKGroteskRegular,
    HKGroteskSemiBold,
-   Typo18SteelHKGroteskSemiBold
+   Typo18SteelHKGroteskSemiBold,
 }

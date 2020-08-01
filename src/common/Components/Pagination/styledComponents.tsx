@@ -22,5 +22,5 @@ export {
    PaginationContainer,
    PaginationArrow,
    NavigateToPrevious,
-   NavigateToNext
+   NavigateToNext,
 }

@@ -1,13 +1,12 @@
 .something {
-    color: black;
- }
- .oval {
-    border-radius: 8px;
-    border: 2px solid greenyellow;
- }
- .rectangular {
-    border-radius: 0px;
-    border: 2px solid indigo;
- }
- 
- 
+   color: black;
+}
+.oval {
+   border-radius: 30px;
+   background-color: cornflowerblue;
+   border: 2px solid red;
+}
+.rectangular {
+   border-radius: 0px;
+   border: 2px solid greenyellow;
+}

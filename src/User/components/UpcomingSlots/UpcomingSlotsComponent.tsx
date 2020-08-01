@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import UserStore from '../../stores/UserStore/UserStore'
-import Button from '../../../common/Components/Button/index'
-import { UpcomingSlotsContainer, UpcomingSlotsCard } from './styledComponents'
+import { Button } from '../../../common/Components/Button/index'
+import {
+   UpcomingSlotsContainer,
+   UpcomingSlotsCard,
+   ButtonStyles,
+} from './styledComponents'
 import { Typo14DarkBlueGreyHKGroteskRegular } from '../../../common/styleGuide/Typos/index'
 import { withTranslation, WithTranslation } from 'react-i18next'
-import LoadingWrapperFailure from '../../../components/common/LoadingWrapperWithFailure'
 import { observer } from 'mobx-react'
 import { observable } from 'mobx'
 import { UpcomingSlotsObj } from '../../stores/types'
@@ -39,25 +42,16 @@ class UpcomingSlotsComponent extends Component<Props> {
                {upcomingSlotsList.map((eachslot) => {
                   return (
                      <Button
-                        isDisable='false'
-                        value='Fg'
-                        key={eachslot.WashingMachineId}
+                        value='Button'
                         textTypo='revert'
-                        className='something'
-                        buttonHeight={2}
-                        buttonWidth={10}
-                        buttonRadius={5}
-                        buttonColor='black'
-                        buttonBgcolor='green'
-                        buttonBrcolor='red'
-                        buttonMargin={8}
+                        css={ButtonStyles}
                         onClick={this.onClickUpdatedSlot.bind(
                            this,
                            eachslot.WashingMachineId,
                            eachslot.StartTime,
                            eachslot.EndTime
                         )}
-                        type={Button.defaultTypes.type.Outline}
+                        type={Button.defaultTypes.type.Filled}
                         varient={Button.defaultTypes.varient.Oval}
                         textTitle={eachslot.Date}
                      />

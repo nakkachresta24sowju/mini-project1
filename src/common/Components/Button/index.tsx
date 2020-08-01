@@ -5,36 +5,25 @@ import {
    ButtonTypes,
    ButtonVarient,
 } from './constants/buttonConstants'
-import { OutlineButton, FilledButton } from './styledComponents'
 import './index.css'
-import { Typo14ButtonText } from '../../styleGuide/Typos'
-import ButtonType from '@storybook/addon-knobs/dist/components/types/Button'
-import { observer } from 'mobx-react'
+import OutlineButton from '../OutlineButton/index'
+import FilledButton from '../FilledButton/index'
+import './index.css'
 type Props = {
    textTypo: any
-   className: any
    textTitle: any
    onClick: any
    varient: any
    type: any
-   buttonHeight: any
-   buttonWidth: any
-   buttonRadius: any
-   buttonColor: any
-   buttonBgcolor: any
-   buttonBrcolor: any
-   buttonMargin: number
+   css: any
    value: any
-   isDisable: string
 }
 
-@observer
 class Button extends React.Component<Props> {
    static defaultTypes = {
       type: ButtonTypes,
       varient: ButtonVarient,
    }
-
    variantsCss = () => {
       const { varient, type } = this.props
       if (varient === 'OVAL') {
@@ -43,68 +32,18 @@ class Button extends React.Component<Props> {
          return 'rectangular'
       }
    }
+
    render() {
-      console.log('button component')
-
-      const {
-         type,
-         textTitle,
-         onClick,
-         buttonHeight,
-         buttonWidth,
-         buttonRadius,
-         buttonColor,
-         buttonBgcolor,
-         buttonBrcolor,
-         varient,
-         buttonMargin,
-         value,
-         isDisable,
-      } = this.props
-
-      if (type === ButtonTypes.Filled) {
-         console.log('Filled button')
-         return (
-            <FilledButton
-               isDisable={isDisable}
-               value={value}
-               textTypo={Typo14ButtonText}
-               className='something'
-               textTitle={textTitle}
-               onClick={onClick}
-               type={ButtonTypes}
-               buttonHeight={buttonHeight}
-               buttonWidth={buttonWidth}
-               variantType={this.variantsCss()}
-               buttonRadius={buttonRadius}
-               buttonColor={buttonColor}
-               buttonBgcolor={buttonBgcolor}
-               buttonBrcolor={buttonBrcolor}
-               buttonMargin={buttonMargin}
-            />
-         )
-      } else if (type === ButtonTypes.Outline) {
-         console.log('outline button')
-         return (
-            <OutlineButton
-               isDisable={isDisable}
-               value={value}
-               textTypo={Typo14ButtonText}
-               className='something'
-               textTitle={textTitle}
-               onClick={onClick}
-               type={ButtonTypes}
-               buttonHeight={buttonHeight}
-               buttonWidth={buttonWidth}
-               variantType={this.variantsCss()}
-               buttonRadius={buttonRadius}
-               buttonColor={buttonColor}
-               buttonBgcolor={buttonBgcolor}
-               buttonBrcolor={buttonBrcolor}
-               buttonMargin={buttonMargin}
-            />
-         )
+      const { type, ...otherProps } = this.props
+      switch (type) {
+         case ButtonTypes.Filled:
+            return <FilledButton {...otherProps} />
+         case ButtonTypes.Outline:
+            return <OutlineButton {...otherProps} />
+         default:
+            console.warn('invalid type')
+            return <BaseButton {...otherProps} />
       }
    }
 }
-export default Button
+export { Button }
