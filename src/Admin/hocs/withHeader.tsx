@@ -21,7 +21,7 @@ function withHeader(WrappedComponent: Function) {
          const { userStore } = this.getInjectedProps()
          return (
             <div>
-               <WrappedComponent userStore={userStore} />
+               <WrappedComponent {...this.props} />
             </div>
          )
       }

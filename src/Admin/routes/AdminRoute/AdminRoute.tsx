@@ -16,6 +16,7 @@ class AdminRoute extends React.Component<injectedProps> {
       const { getWashingMachinesList } = this.props.adminStore
       getWashingMachinesList()
    }
+
    render() {
       const { adminStore } = this.props
 

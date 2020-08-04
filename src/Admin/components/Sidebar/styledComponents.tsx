@@ -3,7 +3,7 @@ import tw from 'tailwind.macro'
 const AdminPageSidebarContainer = styled.div`
    ${tw`flex-col  `}
    margin: 10px;
-   width: 2/5;
+   width: 14%;
    border: 2px solid green;
 `
 const SidebarElements = styled.div`

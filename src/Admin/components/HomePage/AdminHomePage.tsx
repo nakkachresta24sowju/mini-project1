@@ -2,7 +2,7 @@ import React from 'react'
 import { AdminHomePageContainer, Content } from './styledComponents'
 import HomePageContent from '../HomePageContent'
 import Sidebar from '../Sidebar'
-import Header from '../../../User/components/Header'
+import Header from '../../../Admin/components/Header/Header'
 import AdminStore from '../../stores/AdminStore/AdminStore'
 interface ComponentProps {
    adminStore: AdminStore
