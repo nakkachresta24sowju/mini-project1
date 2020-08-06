@@ -7,6 +7,7 @@ import AdminStore from '../../stores/AdminStore/AdminStore'
 interface ComponentProps {
    adminStore: AdminStore
    doNetworkCalls: Function
+   NavigateIssuesPage: Function
 }
 import LoadingWrapperFailure from '../../../components/common/LoadingWrapperWithFailure'
 import { observer } from 'mobx-react'
@@ -24,13 +25,13 @@ class AdminHomePage extends React.Component<ComponentProps> {
          getWashingMachinesAPIError,
          washingMachinesList,
       } = this.props.adminStore
-      const { doNetworkCalls } = this.props
+      const { doNetworkCalls, NavigateIssuesPage } = this.props
 
       return (
          <AdminHomePageContainer>
             <Header />
             <Content>
-               <Sidebar />
+               <Sidebar NavigateIssuesPage={NavigateIssuesPage} />
                <LoadingWrapperFailure
                   apiStatus={getWashingMachinesAPIStatus}
                   apiError={getWashingMachinesAPIError}

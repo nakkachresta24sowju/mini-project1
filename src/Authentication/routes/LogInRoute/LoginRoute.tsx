@@ -4,12 +4,10 @@ import { observer, inject } from 'mobx-react'
 import { withRouter, Redirect } from 'react-router-dom'
 import { History } from 'history'
 import LoginStore from '../../stores/LogInStore/LoginStore'
-import {
-   getAccessToken,
-   clearUserSession
-} from '../../../utils/StorageUtils'
-import {LoginPage }from '../../components/LogIn/index'
-import {ADMIN_HOME_PAGE,USER_HOME_PAGE} from '../../../common/constants/routeConstants'
+import { getAccessToken, clearUserSession } from '../../../utils/StorageUtils'
+import { LoginPage } from '../../components/LogIn/index'
+import { USER_HOME_PAGE } from '../../../User/constants/routeConstants'
+import { ADMIN_HOME_PAGE } from '../../../Admin/constants/routeConstants'
 interface LogInRouteProps {
    history: History
    logInStore: LoginStore
@@ -37,37 +35,28 @@ class LogInRoute extends React.Component<LogInRouteProps> {
          this.password !== undefined &&
          logInStore.getUserLogInAPIError === null
       ) {
-         
          await logInStore.userLogIn(this.username, this.password)
-         
-          if (this.username === '' || this.username === undefined) {
+
+         if (this.username === '' || this.username === undefined) {
             this.errorMessage = 'Please enter username'
          } else if (this.password === '' || this.password === undefined) {
             this.errorMessage = 'Please enter password'
-         }
-         else if (getAccessToken() && logInStore.role === "Admin") {
-            console.log(logInStore.role,55555)
+         } else if (getAccessToken() && logInStore.role === 'Admin') {
+            console.log(logInStore.role, 55555)
             this.errorMessage = ''
             history.push(ADMIN_HOME_PAGE)
-            
-         } 
-         else if (getAccessToken() && logInStore.role === "User") {
-            console.log(logInStore.role,11111111)
+         } else if (getAccessToken() && logInStore.role === 'User') {
+            console.log(logInStore.role, 11111111)
             this.errorMessage = ''
             history.push(USER_HOME_PAGE)
-            
-         } 
-      
-         else {
+         } else {
             this.errorMessage = 'Network Error'
          }
       } else if (logInStore.getUserLogInAPIError) {
-         
          this.errorMessage = 'Network Error'
-      } 
+      }
    }
    render() {
-      
       return (
          <LoginPage
             userName={this.username}
@@ -77,11 +66,8 @@ class LogInRoute extends React.Component<LogInRouteProps> {
             onClickLogIn={this.onClickLogIn}
             errorMessage={this.errorMessage}
          />
-      )}
-   
+      )
+   }
 }
 
 export default withRouter(LogInRoute)
-
-
-

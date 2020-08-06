@@ -27,8 +27,7 @@ const ImageWithDetails = styled.div`
    background-color:white;
 `
 const Image = styled.img`
-   height: 600px;
-   width: 400px;
+   width: 50%;
 `
 const Details = styled.div`
    ${tw`flex flex-col justify-center`}
@@ -57,6 +56,7 @@ const CloseButtonContainer = styled.div`
 const PopupContentBox = styled.div`
    position: relative;
    margin: 10%;
+   width: 70%;
    border: 4px solid maroon;
 `
 export {

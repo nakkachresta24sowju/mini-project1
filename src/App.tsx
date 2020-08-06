@@ -9,11 +9,9 @@ import Loader from './components/common/Icons/Loader/SvgFile'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n'
 import ProtectedRoute from './common/Components/ProtectedRoute/index'
-import {
-   ADMIN_HOME_PAGE,
-   LOGIN_PATH,
-   USER_HOME_PAGE,
-} from './common/constants/routeConstants'
+import { LOGIN_PATH } from './common/constants/routeConstants'
+import { ADMIN_HOME_PAGE } from './Admin/constants/routeConstants'
+import { USER_HOME_PAGE } from './User/constants/routeConstants'
 import AdminRoute from './Admin/routes/AdminRoute/AdminRoute'
 import UserRoute from './User/routes/UserRoute/UserRoute'
 const LogInRoute = lazy(() =>

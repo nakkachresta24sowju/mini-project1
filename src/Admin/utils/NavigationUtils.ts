@@ -1,1 +1,3 @@
-export function NavigateToAdminIssuesPage() {}
+export function NavigateToAdminIssuesPage(history) {
+   history.push('/Admin/IssuesPage')
+}
