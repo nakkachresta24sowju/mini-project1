@@ -21,7 +21,7 @@
       "mobx": "5.15.0",
       "mobx-react": "6.1.4",
       "node-uuid": "1.4.8",
-      "postcss-cli": "^7.1.0",
+      "postcss-cli": "^8.0.0",
       "react": "^16.13.0",
       "react-dom": "^16.13.0",
       "react-i18next": "11.7.0",
